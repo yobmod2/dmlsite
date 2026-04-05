@@ -1,56 +1,90 @@
 {
-    "python.analysis.disabled": ["unresolved-import", "undefined-variable"],
-    "python.analysis.downloadChannel": "daily",
-    "python.autoComplete.extraPaths": ["./",],
-    "workbench.iconTheme": "material-icon-theme",
+	"material-icon-theme.folders.associations": {
+		"typings": "typescript",
 
+		"static": "resource",
+		"staticfiles": "resource",
+		"static_cdn": "resource",
+		"static_root": "resource",
 
-        "material-icon-theme.folders.associations": {
-            "typings": "typescript",
+		"media": "video",
+		"media_cdn": "video",
+		"media_root": "video",
 
-            "static": "resource",
-            "static_cdn": "resource",
-            "static_root": "resource",
+		"templates": "jinja",
 
-            "media": "video",
-            "media_cdn": "video",
-            "media_root": "video",
+		"utilities": "tools",
+		"utils": "tools",
 
-            "templates": "jinja",
+		".mypy_cache": "circleci",
+		".cache": "circleci"
+	},
 
-            "utilities": "tools",
-            "utils": "tools",
+	"editor.fontSize": 16,
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"git.autofetch": true,
 
-            ".mypy_cache": "circleci",
-            ".cache": "circleci",
-            
-        },
+	"python-envs.workspaceSearchPaths": ["./**/.venv"],
+	"python.autoComplete.extraPaths": ["./"],
+	"python.analysis.typeCheckingMode": "standard",
+	"python.analysis.autoSearchPaths": true,
+	"mypy-type-checker.importStrategy": "fromEnvironment",
+	"mypy-type-checker.preferDaemon": false,
+	"mypy-type-checker.reportingScope": "workspace",
+	"mypy-type-checker.severity": { "error": "Warning" },
 
-        
-            "python.linting.pylintEnabled": false,
-            "python.linting.mypyEnabled": true,
-            "python.linting.enabled": true,
-            "python.linting.pylamaEnabled": true,
-            "python.linting.flake8Enabled": true,
-            "python.linting.pycodestyleEnabled": false,
-            "python.linting.pydocstyleEnabled": false,
-        
-            "python.linting.lintOnSave": true,
-        
-            "editor.fontSize": 16,
-        
-            "workbench.colorTheme": "Monokai-Contrast",
-            "git.enableSmartCommit": true,
-            "git.confirmSync": false,
-            "git.autofetch": true,
-            "[python]": {
-                
-            },
-            "python.formatting.provider": "autopep8",
-            "python.languageSever": "Pylance",
-            "python.analysis.typeCheckingMode": "basic",
-            "python.analysis.extraPaths": [
-                "./",
-                "."
-            ]
-        }
+	"notebook.formatOnSave.enabled": true,
+	"[python]": {
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "explicit",
+			"source.organizeImports": "explicit"
+		},
+		"editor.defaultFormatter": "charliermarsh.ruff" //,ms-python.autopep8" //,ms-python.black-formatter"
+	},
+
+	"[toml]": {
+		"breadcrumbs.showArrays": true,
+		"editor.defaultFormatter": "tamasfe.even-better-toml"
+	},
+
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.prettier": "explicit",
+			"source.fixAll.eslint": "explicit",
+			"source.organizeImports": "explicit"
+		}
+	},
+
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.prettier": "explicit",
+			"source.fixAll.eslint": "explicit",
+			"source.organizeImports": "explicit"
+		}
+	},
+
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.quickSuggestions": { "strings": true },
+		"editor.suggest.insertMode": "replace",
+		"editor.codeActionsOnSave": { "source.fixAll.prettier": "explicit" }
+	},
+
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.prettier": "explicit" }
+	},
+
+	"editor.tabCompletion": "on",
+	"prettier.experimentalOperatorPosition": "start",
+	"prettier.experimentalTernaries": true,
+	"prettier.objectWrap": "collapse",
+	"prettier.printWidth": 100,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"python.analysis.autoImportCompletions": true
+}

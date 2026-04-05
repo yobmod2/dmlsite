@@ -1,20 +1,7 @@
-myvenv
-/.env
+*.env
 
-local_settings.py
-.cache/
+.venv/
+.vscode/
 .mypy_cache/
-.pytest_cache/
-.coverage
-.idea/
-htmlcov/
 
-/static_root
-/media_root
-db.sqlite3
-.DS_Store
-.boto
-
-
-*.pyc
-__pycache__
+*/__pycache__
